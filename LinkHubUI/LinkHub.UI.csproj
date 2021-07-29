@@ -180,6 +180,16 @@
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BLL\LinkHub.BLL.csproj">
+      <Project>{1b20d2aa-2667-4bba-870d-23d4a7a89e56}</Project>
+      <Name>LinkHub.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BOL\LinkHub.BOL.csproj">
+      <Project>{ff6697b3-7fdb-4e40-b137-8a827710b744}</Project>
+      <Name>LinkHub.BOL</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

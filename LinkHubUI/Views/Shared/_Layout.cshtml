@@ -16,13 +16,19 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                @Html.ActionLink("LinkHubApp", "Index", "Home", new { area = "Common" }, new { @class = "navbar-brand" })
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    <li>@Html.ActionLink("Home", "Index", new { controller = "Home", Area = "Common" })</li>
+                    <li>@Html.ActionLink("Category", "Index", new { controller = "Category", Area = "Admin" })</li>
+                    <li>@Html.ActionLink("ListCategory", "Index", new { controller = "ListCategory", Area = "Admin" })</li>
+                    <li>@Html.ActionLink("BrowseURL", "Index", new { controller = "URL", Area = "User" })</li>
+                    <li>@Html.ActionLink("SubmitURL", "Index", new { controller = "Home", Area = "Common" })</li>
+                    <li>@Html.ActionLink("ApprovedURL", "Index", new { controller = "ApprovedURL", Area = "Admin" })</li>
+                    <li>@Html.ActionLink("ListUsers", "Index", new { controller = "ListUsers", Area = "Admin" })</li>
+                    <li>@Html.ActionLink("Register", "Index", new { controller = "Register", Area = "Security" })</li>
+                    <li>@Html.ActionLink("Login", "Index", new { controller = "Login", Area = "Security" })</li>
                 </ul>
             </div>
         </div>

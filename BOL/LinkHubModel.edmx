@@ -133,7 +133,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="LinkHubDBEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="LinkHubDBContext" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="tbl_Category" EntityType="Self.tbl_Category" />
           <EntitySet Name="tbl_Url" EntityType="Self.tbl_Url" />
           <EntitySet Name="tbl_User" EntityType="Self.tbl_User" />
@@ -151,7 +151,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="LinkHubDBModelStoreContainer" CdmEntityContainer="LinkHubDBEntities">
+        <EntityContainerMapping StorageEntityContainer="LinkHubDBModelStoreContainer" CdmEntityContainer="LinkHubDBContext">
           <EntitySetMapping Name="tbl_Category">
             <EntityTypeMapping TypeName="LinkHubDBModel.tbl_Category">
               <MappingFragment StoreEntitySet="tbl_Category">

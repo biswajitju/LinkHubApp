@@ -12,20 +12,16 @@
     <tr>
         <th>
             @Html.ActionLink("UrlTitle","Index", new {SortOder = ViewBag.SortOder == null ? "Asc" :(ViewBag.SortOder == "Asc" ? "Desc" : "Asc"), SortBy = "Title"})
-           @* @Html.DisplayNameFor(model => model.UrlTitle)*@
         </th>
         <th>
             @Html.ActionLink("Title", "Index", new { SortOder = ViewBag.SortOder == null ? "Asc" : (ViewBag.SortOder == "Asc" ? "Desc" : "Asc"), SortBy = "Url" })
-            @*@Html.DisplayNameFor(model => model.Url)*@
         </th>
         <th>
             @Html.ActionLink("UrlDesc", "Index", new { SortOder = ViewBag.SortOder == null ? "Asc" : (ViewBag.SortOder == "Asc" ? "Desc" : "Asc"), SortBy = "UrlDesc" })
-            @*@Html.DisplayNameFor(model => model.UrlDesc)*@
         </th>
         </th>
         <th>
             @Html.ActionLink("Category", "Index", new { SortOder = ViewBag.SortOder == null ? "Asc" : (ViewBag.SortOder == "Asc" ? "Desc" : "Asc"), SortBy = "Category" })
-            @*@Html.DisplayNameFor(model => model.tbl_Category.CategoryName)*@
         </th>
     </tr>
 

@@ -27,10 +27,10 @@ namespace LinkHubUI.Areas.Common
                     switch (sortOder)
                     {
                         case "Asc":
-                            URLs = urlBL.GetALL().Where(a => a.IsApproved == "A").OrderBy(a => a.UrlTitle);
+                            URLs = URLs.OrderBy(a => a.UrlTitle);
                             break;
                         case "Desc":
-                            URLs = urlBL.GetALL().Where(a => a.IsApproved == "A").OrderByDescending(a => a.UrlTitle);
+                            URLs = URLs.OrderByDescending(a => a.UrlTitle);
                             break;
                         default:
                             break;
@@ -41,10 +41,10 @@ namespace LinkHubUI.Areas.Common
                     switch (sortOder)
                     {
                         case "Asc":
-                             URLs = urlBL.GetALL().Where(a => a.IsApproved == "A").OrderBy(a => a.Url);
+                             URLs = URLs.OrderBy(a => a.Url);
                             break;
                         case "Desc":
-                            URLs = urlBL.GetALL().Where(a => a.IsApproved == "A").OrderByDescending(a => a.Url);
+                            URLs = URLs.OrderByDescending(a => a.Url);
                             break;
                         default:
                             break;
@@ -55,10 +55,10 @@ namespace LinkHubUI.Areas.Common
                     switch (sortOder)
                     {
                         case "Asc":
-                            URLs = urlBL.GetALL().Where(a => a.IsApproved == "A").OrderBy(a => a.UrlDesc);
+                            URLs = URLs.OrderBy(a => a.UrlDesc);
                             break;
                         case "Desc":
-                             URLs = urlBL.GetALL().Where(a => a.IsApproved == "A").OrderByDescending(a => a.UrlDesc);
+                             URLs = URLs.OrderByDescending(a => a.UrlDesc);
                             break;
                         default:
                             break;
@@ -69,17 +69,17 @@ namespace LinkHubUI.Areas.Common
                     switch (sortOder)
                     {
                         case "Asc":
-                             URLs = urlBL.GetALL().Where(a => a.IsApproved == "A").OrderBy(a => a.tbl_Category.CategoryName);
+                             URLs = URLs.OrderBy(a => a.tbl_Category.CategoryName);
                             break;
                         case "Desc":
-                             URLs = urlBL.GetALL().Where(a => a.IsApproved == "A").OrderByDescending(a => a.tbl_Category.CategoryName);
+                             URLs = URLs.OrderByDescending(a => a.tbl_Category.CategoryName);
                             break;
                         default:
                             break;
                     }
                     break;
                 default:
-                    URLs = urlBL.GetALL().Where(a => a.IsApproved == "A").OrderBy(a=>a.UrlTitle);
+                    URLs = URLs.OrderBy(a=>a.UrlTitle);
                     break;
 
             }

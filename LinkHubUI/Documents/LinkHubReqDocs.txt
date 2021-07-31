@@ -1,0 +1,43 @@
+LinkStore
+Requirement 
+
+Roles :
+1. User
+-> Can brows URL
+-> Can Register
+-> Can Submit a URL
+2. Admin
+-> Can CRUD operations
+-> Can View All Users
+-> Can Approved/Reject URL
+
+Identifying the Objects
+1.USER
+2.CATEGORY
+3.URL
+
+Creating The Relationships
+Category 1----------n URL =1:M
+User 1-------------n URL = 1:M
+
+Designing Database
+Rules 
+-> One Table for each object
+-> For 1:M relationship. 1 will become Master(Base) and M will become child  i.e Primary key of 1 will act as a foreign key of M.
+->M:M relationship. Both  the object become master and there will be one more new table called transaction table or child table with primary keys of master as foreign key in it.
+Eg. Student : Course =M:M
+new table will be Student_Course with SCId ,SID FK,CID FK
+
+
+Design Project Architecture
+3 Layer Architecture
+
+UI ( ASP.NET MVC)
+BLL (C#.NET )
+DAL ( Ado.Net EF)
+-Database-
+
+BOL(Business Object Layer -  Connect above 3 layers)
+
+
+Database First Approach

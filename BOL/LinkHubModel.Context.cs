@@ -13,10 +13,10 @@ namespace BOL
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class LinkHubDBEntities : DbContext
+    public partial class LinkHubDBContext : DbContext
     {
-        public LinkHubDBEntities()
-            : base("name=LinkHubDBEntities")
+        public LinkHubDBContext()
+            : base("name=LinkHubDBContext")
         {
         }
     
